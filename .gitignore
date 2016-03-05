@@ -2,3 +2,8 @@ RemoteSystemsTemsTempFiles/
 .metadata/
 .recommenders/
 test/
+*/.classpath
+*/.project
+.settings/
+*.zip
+bin/

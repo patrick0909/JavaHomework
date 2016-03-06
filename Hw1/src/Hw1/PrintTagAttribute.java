@@ -14,18 +14,12 @@ public class PrintTagAttribute {
 			System.out.println("No match pattern");
 		}
 		/* compose pattern string */
-		String tmp = "<" + target + " (.*)>";
+		String tmp = "<" + target + " (.*?)\\/?>";
 		int length;
 		pattern = Pattern.compile(tmp);
 		matcher = pattern.matcher(args[0]);
 		if (matcher.find()) {
-			if (matcher.group(1).endsWith("/")) {
-				length = matcher.group(1).length();
-				System.out.println(matcher.group(1).substring(0, length-1));
-			}
-			else {
 			System.out.println(matcher.group(1));
-			}
 		}
 	}
 }
